@@ -154,7 +154,7 @@
 
 		<dependency>
 			<groupId>com.zaxxer</groupId>
-			<artifactId>HikariCP-java6</artifactId>
+			<artifactId>HikariCP</artifactId>
 			<scope>compile</scope>
 		</dependency>
 		
@@ -166,7 +166,7 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>9.3-1102-jdbc41</version>
+			<version>42.2.5</version>
 		</dependency>
 		
 		<!-- Logging -->
@@ -242,8 +242,9 @@
                     <defaultSchemaName />
                     <username>postgres</username>
                     <password />
-                    <referenceUrl>hibernate:spring:it.aldi.app.domain?dialect=org.hibernate.dialect
-                        .PostgreSQL82Dialect</referenceUrl>
+                    <referenceUrl>
+                        hibernate:spring:it.aldi.app.domain?dialect=org.hibernate.dialect.PostgreSQL9Dialect
+                    </referenceUrl>
                     <verbose>true</verbose>
                     <logging>debug</logging>
                 </configuration>
